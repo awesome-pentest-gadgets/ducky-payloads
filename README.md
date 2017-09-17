@@ -9,5 +9,5 @@ https://hakshop.com/products/usb-rubber-ducky-deluxe
 Kinda same as USB Rubber Ducky but based on Arduino. (And it's cheaper ;)
 https://malduino.com
 
-**What is DuckyScript**
+**What is DuckyScript?**
 Scripting Language used to "code" above devices^^
