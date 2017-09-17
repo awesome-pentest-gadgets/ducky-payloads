@@ -22,8 +22,5 @@ CTRL ALT +
 STRING etc
 ENTER
 DELAY 400
-STRING echo 0.0.0.0 www.google.com>>hosts
+STRING echo 0.0.0.0 www.google.com>>hosts & exit
 ENTER
-DELAY 400
-ALT SPACE
-STRING s
